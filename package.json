@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/scroll-direction.umd.js",
+  "module": "dist/scroll-direction.esm.js",
+  "typings": "dist/types/ScrollDirection.d.ts",
   "scripts": {
+    "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
