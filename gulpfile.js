@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const ts = require('gulp-typescript');
 const tsProject = ts.createProject('tsconfig.json');
-const { dest, parallel } = require('gulp');
+const { dest, parallel, watch } = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
 const terser = require('gulp-terser');
 const rename = require('gulp-rename');
@@ -60,5 +60,12 @@ function rollup(cb) {
 }
 
 const build = parallel(buildJs, buildDts, rollup);
+
+exports.watch = function(cb) {
+  const watcher = watch(['src/**'], { ignoreInitial: false }, parallel(buildJs, buildDts));
+  watcher.on('ready', () => run('rollup -cw').exec());
+
+  cb();
+};
 exports.build = build;
 exports.default = build;
