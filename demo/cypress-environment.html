@@ -14,6 +14,21 @@
   </style>
   <script src="../dist/scroll-direction.umd.js"></script>
   <script src="./libs/rxjs/6.5.3/rxjs.umd.min.js"></script>
+  <script>
+    const wait = ms => new Promise(resolve => setTimeout(resolve,ms));
+    async function smoothScrollY(from, to, duration = 1000, pixelPerScrollEvent = 5, target = window) {
+      const distance = Math.abs(from - to);
+      const step = distance / pixelPerScrollEvent;
+      const durationPerStep = duration / step;
+      const pixelStep = from > to ? -pixelPerScrollEvent : pixelPerScrollEvent;
+
+      target.scrollTo(0, from);
+      for (let i = 0; i < step; i++) {
+        target.scrollTo(0, from + (i + 1) * pixelStep);
+        await wait(durationPerStep);
+      }
+    }
+  </script>
 </head>
 <body>
   <div id="container">
