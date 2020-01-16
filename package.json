@@ -5,6 +5,10 @@
   "main": "dist/scroll-direction.umd.js",
   "module": "dist/scroll-direction.esm.js",
   "typings": "dist/types/ScrollDirection.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnakinYuen/scroll-direction.git"
+  },
   "scripts": {
     "dev": "gulp watch",
     "build": "gulp",
