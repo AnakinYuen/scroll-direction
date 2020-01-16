@@ -1,7 +1,7 @@
 {
   "name": "@anakinyuen/scroll-direction",
   "version": "1.0.0",
-  "description": "",
+  "description": "0 dependency JavaScript library for monitoring scroll direction in the element",
   "main": "dist/scroll-direction.umd.js",
   "module": "dist/scroll-direction.esm.js",
   "typings": "dist/types/ScrollDirection.d.ts",
