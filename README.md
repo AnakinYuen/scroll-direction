@@ -9,7 +9,7 @@
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@anakinyuen/scroll-direction.svg)]()
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-0 dependency JavaScript library for monitoring scroll direction in the element. (Inspired by [scrolldir](https://github.com/dollarshaveclub/scrolldir))
+0 dependency JavaScript library for monitoring scroll direction in the element. (Inspired by [scrolldir](https://github.com/dollarshaveclub/scrolldir) and [scroll-intent](https://github.com/pwfisher/scroll-intent))
 
 ## Key Features
 
@@ -130,6 +130,10 @@ not op_mini all
 ### For `scroll-direction.esm.js`
 
 Requires [ES2015 classes](https://caniuse.com/es6-class) and [ES2015 module](https://caniuse.com/#feat=es6-module). IE11 and below not supported.
+
+## Credits
+
+This is a typescript version of [scrolldir](https://github.com/dollarshaveclub/scrolldir) which is also a modular version of [pwfisher](https://github.com/pwfisher)'s [scroll-intent](https://github.com/pwfisher/scroll-intent.js). If you'd like to use scrolldir with jQuery use Scroll Intent.
 
 ## Licensing
 
